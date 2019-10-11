@@ -23,9 +23,9 @@ export const changeInput = (target) => {
   }
 }
 
-export const addSmurfs = () => dispatch => {
+// export const addSmurfs = () => dispatch => {
 
-  axios.post(smurfsApi)
-    .then(res => dispatch({ type: types.ADD_SMURF, payload: res.data}))
-    .catch(err => err)
-}
+//   axios.post(smurfsApi)
+//     .then(res => dispatch({ type: types.ADD_SMURF, payload: res.data}))
+//     .catch(err => err)
+// }

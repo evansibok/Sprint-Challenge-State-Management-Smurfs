@@ -15,7 +15,7 @@ const CardList = props => {
   return (
     <div>
       {
-        smurfState.map(smurf => {
+        smurfState && smurfState.map(smurf => {
           return <div key={smurf.id}>
             <h2>{smurf.name}</h2>
             <div>

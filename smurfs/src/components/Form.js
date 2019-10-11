@@ -5,8 +5,8 @@ import * as actionCreators from '../state/actionCreators'
 
 const Form = props => {
 
-  const { smurfState, changeInput } = props
-  console.log(smurfState)
+  const { formValues, changeInput } = props
+  console.log(formValues)
 
   const onValueChange = evt => {
     changeInput(evt.target)
@@ -19,19 +19,25 @@ const Form = props => {
       <div>
         <input
           name="name"
+          value={formValues.name}
           placeholder="Enter Name..."
           onChange={onValueChange}
         /><br /><br />
+
         <input
           name="age"
+          value={formValues.age}
           placeholder="Enter Age..."
           onChange={onValueChange}
         /><br /><br />
+
         <input
           name="height"
+          value={formValues.height}
           placeholder="Enter Height..."
-          onChange={changeInput}
+          onChange={onValueChange}
         /><br /><br />
+
         <button>Join Village!</button>
       </div>
 
@@ -41,7 +47,7 @@ const Form = props => {
 
 const mapStateToProps = state => {
   return {
-    smurfState: state.smurfState
+    formValues: state.formValues
   }
 }
 

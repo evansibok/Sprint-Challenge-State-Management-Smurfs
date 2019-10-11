@@ -9,6 +9,7 @@ import * as reducers from './state/reducers';
 
 const generalReducer = combineReducers({
   count: reducers.countReducer,
+  smurfState: reducers.smurfsReducer
 })
 
 const store = createStore(

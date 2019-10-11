@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actionCreators from '../state/actionCreators'
 
 
 const CardList = () => {
@@ -10,4 +12,10 @@ const CardList = () => {
   )
 }
 
-export default CardList;
+const mapStateToProps = state => {
+  return {
+    smurfState: state.smurfState
+  }
+}
+
+export default connect(mapStateToProps, actionCreators)(CardList);

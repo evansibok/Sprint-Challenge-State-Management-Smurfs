@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import "./index.css";
 import App from "./components/App";
@@ -10,7 +10,13 @@ const generalReducer = combineReducers({
   count: reducers.countReducer,
 })
 
-const store = createStore(generalReducer);
+const store = createStore(
+  generalReducer,
+  compose(
+    applyMiddleware(),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
 
 ReactDOM.render(
   <Provider store={store}>

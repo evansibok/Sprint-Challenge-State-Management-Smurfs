@@ -2,7 +2,6 @@ import * as types from './actionTypes';
 
 
 const initialValueCount = 0;
-
 export const countReducer = (count = initialValueCount, action) => {
   switch (action.type) {
     case types.INCREMENT:

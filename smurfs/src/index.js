@@ -4,18 +4,13 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import "./index.css";
 import App from "./components/App";
+import { countReducer } from './state/reducers';
 
-const store = createStore(customReducer);
-
-const customReducer = () => {
-  return {
-    title: "Hello World! I'm a custom reducer."
-  };
-}
+const store = createStore(countReducer);
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>, 
+  </Provider>,
   document.getElementById("root")
-  );
+);

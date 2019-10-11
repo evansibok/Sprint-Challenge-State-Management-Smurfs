@@ -15,17 +15,15 @@ export const countReducer = (count = initialValueCount, action) => {
   }
 }
 
-const initialSmurfs = [
-  {
-    id: 0,
-    name: "someone",
-    age: 23,
-    height: "4cm"
-  }
-]
+const initialSmurfs = [];
 
 export const smurfsReducer = (state = initialSmurfs, action) => {
   switch (action.type) {
+    case types.FETCH_SMURFS:
+      return {
+        ...state,
+        payload: action.payload
+      }
     default:
       return state;
   }

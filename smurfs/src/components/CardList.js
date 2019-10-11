@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../state/actionCreators'
 
@@ -34,4 +34,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  actionCreators)(CardList);
+  actionCreators
+)(CardList);

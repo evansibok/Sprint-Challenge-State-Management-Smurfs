@@ -15,7 +15,14 @@ export const countReducer = (count = initialValueCount, action) => {
   }
 }
 
-const initialSmurfs = [];
+const initialSmurfs = [
+  {
+    id: 1,
+    name: 'evans',
+    age: 18,
+    height: '24cm'
+  }
+];
 
 export const smurfsReducer = (state = initialSmurfs, action) => {
   switch (action.type) {

@@ -15,13 +15,11 @@ export const reset = () => {
   return { type: types.RESET };
 }
 
-// export const getSmurfs = () => dispatch => {
+export const getSmurfs = () => dispatch => {
 
-//   axios.get(smurfsApi)
-//     .then(res => {
-//       return res.data
-//     })
-//     .catch(err => err)
-
-//     dispatch({ type: types.FETCH_SMURFS })
-// }
+  axios.get(smurfsApi)
+    .then(res => {
+      dispatch({ type: types.FETCH_SMURFS, payload: res.data })
+    })
+    .catch(err => err) 
+}

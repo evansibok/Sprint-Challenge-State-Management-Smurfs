@@ -6,7 +6,6 @@ import * as actionCreators from '../state/actionCreators'
 const CardList = props => {
 
   const { smurfState, getSmurfs } = props;
-  console.log(smurfState)
 
   useEffect(() => {
 

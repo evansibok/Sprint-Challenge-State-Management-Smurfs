@@ -13,6 +13,7 @@ import * as reducers from '../src/redux/'
 // combine reducers here
 const rootReducer = combineReducers({
   smurfs: reducers.smurfReducer,
+  form: reducers.smurfForm,
 })
 
 // Create redux store

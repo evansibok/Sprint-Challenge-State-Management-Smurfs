@@ -13,3 +13,16 @@ export const getSmurfs = () => dispatch => {
     })
     .catch()
 }
+
+export const onInputChange = (name, value) => {
+  return {
+    type: types.INPUT_CHANGE,
+    payload: { name, value }
+  }
+}
+
+export const submitForm = () => {
+  return {
+    type: types.SUBMIT,
+  }
+}

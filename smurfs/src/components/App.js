@@ -1,15 +1,20 @@
-import React from 'react';
-import CardList from './CardList';
-import Form from './Form';
+import React, { Component } from "react";
+import "./styles.scss";
 
-const App = () => {
+import SmurfsList from './smurfsList';
+import SmurfForm from "./smurfForm";
 
-  return (
-    <div>
-      <CardList />
-      <Form />
-    </div>
-  )
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>SMURFS VILLAGE! 2.0 W/ Redux</h1>
+        <SmurfForm />
+        <SmurfsList />
+      </div>
+    );
+  }
 }
 
 export default App;

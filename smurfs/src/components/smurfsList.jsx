@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import * as actionCreators from "../redux/actionCreators";
 import { SmurfCard } from "./smurfCard";
 
-export const SmurfsList = ({ smurfs, getSmurf }) => {
+export const SmurfsList = ({ smurfs, getSmurfs }) => {
   useEffect(() => {
-    getSmurf();
+    getSmurfs();
     return () => {};
   }, []);
 

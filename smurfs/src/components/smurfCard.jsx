@@ -2,10 +2,10 @@ import React from "react";
 
 export const SmurfCard = ({smurf}) => {
   return (
-    <div>
+    <div className="smurfCard">
       <h2>{smurf.name}</h2>
-      <h4>{smurf.age}</h4>
-      <h4>{smurf.height}</h4>
+      <h4>Age: {smurf.age}</h4>
+      <h4>Height: {smurf.height}</h4>
     </div>
   );
 };

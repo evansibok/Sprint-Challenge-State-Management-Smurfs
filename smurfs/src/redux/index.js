@@ -4,11 +4,12 @@ import * as types from './actionTypes'
 // Create initial slice of state
 const initialSmurfs = [];
 
-// create smurf reducer
 export function smurfReducer(smurfs = initialSmurfs, action) {
   switch (action.type) {
-    case types.GET_SMURF:
+    case types.GET_SMURFS:
       return action.payload;
+    case types.ADD_SMURF:
+      return [...smurfs, action.payload,];
     default:
       return smurfs
   }

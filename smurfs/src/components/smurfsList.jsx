@@ -7,12 +7,12 @@ export const SmurfsList = ({ smurfs, getSmurfs }) => {
   useEffect(() => {
     getSmurfs();
     return () => {};
-  }, []);
+  }, [getSmurfs]);
 
   return (
-    <div>
+    <div className="smurfList">
       {smurfs.map(smurf => (
-        <SmurfCard smurf={smurf} key={smurf.id} />
+        <SmurfCard key={smurf.id} smurf={smurf} />
       ))}
     </div>
   );

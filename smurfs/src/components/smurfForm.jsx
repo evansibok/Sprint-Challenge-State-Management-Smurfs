@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actionCreators from "../redux/actionCreators";
 
-export const SmurfForm = ({ form, onInputChange, submitForm }) => {
+export const SmurfForm = ({ form, onInputChange, submitForm, addSmurf }) => {
   const inputChange = evt => {
     onInputChange(evt.target.name, evt.target.value);
   };
@@ -11,6 +11,16 @@ export const SmurfForm = ({ form, onInputChange, submitForm }) => {
     evt.preventDefault();
     submitForm();
   };
+
+  const addNewSmurf = () => {
+    const newSmurf = {
+      name: form.name,
+      age: form.age,
+      height: form.height,
+    };
+    addSmurf(newSmurf);
+  }
+
   return (
     <div className="formCon">
       <form className="formBody" onSubmit={submit}>
@@ -35,7 +45,7 @@ export const SmurfForm = ({ form, onInputChange, submitForm }) => {
           placeholder="Enter Height..."
           onChange={inputChange}
         />
-        <button>Add Smurf</button>
+        <button onClick={addNewSmurf}>Add Smurf</button>
       </form>
     </div>
   );
